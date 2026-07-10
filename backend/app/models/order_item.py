@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Float, ForeignKey, Integer
+from sqlalchemy import Column, Float, ForeignKey, Integer, Numeric
 from sqlalchemy.orm import relationship
 
 from app.database.database import Base
@@ -27,7 +27,7 @@ class OrderItem(Base):
     )
 
     unit_price = Column(
-        Float,
+        Numeric(10,2),
         nullable=False
     )
 

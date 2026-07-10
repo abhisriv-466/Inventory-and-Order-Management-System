@@ -1,4 +1,4 @@
-from sqlalchemy import Column, DateTime, Float, Integer, String
+from sqlalchemy import Column, DateTime, Float, Integer, String, Numeric
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
@@ -14,7 +14,7 @@ class Product(Base):
 
     sku = Column(String(100), unique=True, nullable=False, index=True)
 
-    price = Column(Float, nullable=False)
+    price = Column(Numeric(10,2), nullable=False)
 
     quantity = Column(Integer, nullable=False, default=0)
 
