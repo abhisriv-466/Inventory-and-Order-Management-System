@@ -38,5 +38,6 @@ class OrderItem(Base):
 
     product = relationship(
         "Product",
-        back_populates="order_items"
+        back_populates="order_items",
+        lazy="joined"
     )
