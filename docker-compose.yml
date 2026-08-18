@@ -1,0 +1,36 @@
+services:
+
+  db:
+    image: postgres:16-alpine
+    container_name: inventory_db
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: inventory_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 2004
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: inventory_backend
+    restart: unless-stopped
+
+    env_file:
+      - ./backend/.env.docker
+
+    depends_on:
+      - db
+
+    ports:
+      - "8000:8000"
+
+volumes:
+  postgres_data:
