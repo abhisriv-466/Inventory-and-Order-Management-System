@@ -8,6 +8,7 @@ from app.routers import (
     products,
     customers,
     orders,
+    dashboard,
 )
 
 # Import all models so SQLAlchemy registers them
@@ -41,3 +42,4 @@ def home():
 app.include_router(products.router)
 app.include_router(customers.router)
 app.include_router(orders.router)
+app.include_router(dashboard.router)
