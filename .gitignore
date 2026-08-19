@@ -80,6 +80,7 @@ build/
 # ==========================
 
 *.pid
+docker-compose.override.yml
 
 # ==========================
 # Miscellaneous
