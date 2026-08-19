@@ -11,6 +11,19 @@ class CustomerBase(BaseModel):
 class CustomerCreate(CustomerBase):
     pass
 
+class CustomerUpdate(BaseModel):
+    full_name: str | None = Field(
+        default=None,
+        min_length=1,
+        max_length=255,
+    )
+    email: EmailStr | None = None
+    phone: str | None = Field(
+        default=None,
+        min_length=7,
+        max_length=20,
+    )
+
 
 class CustomerResponse(CustomerBase):
     id: int

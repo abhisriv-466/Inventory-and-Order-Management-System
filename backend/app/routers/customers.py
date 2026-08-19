@@ -5,6 +5,7 @@ from app.database.database import get_db
 from app.schemas.customer import (
     CustomerCreate,
     CustomerResponse,
+    CustomerUpdate,
 )
 from app.services.customer_service import CustomerService
 
@@ -53,6 +54,20 @@ def get_customer(
         customer_id,
     )
 
+@router.put(
+    "/{customer_id}",
+    response_model=CustomerResponse,
+)
+def update_customer(
+    customer_id: int,
+    customer_data: CustomerUpdate,
+    db: Session = Depends(get_db),
+):
+    return CustomerService.update_customer(
+        db,
+        customer_id,
+        customer_data,
+    )
 
 @router.delete(
     "/{customer_id}",
