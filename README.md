@@ -103,7 +103,8 @@ Fastapi Project/
 │   │
 │   ├── Dockerfile
 │   ├── .dockerignore
-│   ├── .env.example
+│   ├── .env
+│   ├── .env.docker
 │   └── requirements.txt
 │
 ├── frontend/
@@ -157,11 +158,9 @@ The Docker Compose configuration starts:
 ## 1. Clone the repository
 
 ```bash
-git clone <GITHUB_REPOSITORY_URL>
-cd <PROJECT_DIRECTORY>
+git clone abhisriv-466/Inventory-and-Order-Management-System
+cd .
 ```
-
-Replace `<GITHUB_REPOSITORY_URL>` with the repository URL.
 
 ---
 
@@ -174,10 +173,6 @@ For the backend:
 ```text
 backend/.env
 ```
-
-Use `backend/.env.example` as a reference.
-
-Do not commit files containing real credentials to GitHub.
 
 ---
 
@@ -560,24 +555,24 @@ The complete application has been tested using Docker Compose with:
 
 # Deployment
 
-The project is intended to be deployed online using free hosting platforms.
+The project was deployed online using free hosting platforms.
 
 ## Backend
 
-Planned/actual backend deployment:
+Backend deployment:
 
 ```text
-Platform: <RENDER / RAILWAY / FLY.IO>
-URL: <LIVE_BACKEND_URL>
+Platform: RENDER
+URL: https://inventory-backend-5ml9.onrender.com
 ```
 
 ## Frontend
 
-Planned/actual frontend deployment:
+Frontend deployment:
 
 ```text
-Platform: <VERCEL / NETLIFY>
-URL: <LIVE_FRONTEND_URL>
+Platform: VERCEL
+URL: https://inventory-and-order-management-syst-pi.vercel.app
 ```
 
 After deployment, the frontend must be configured to communicate with the deployed backend API.
@@ -589,7 +584,7 @@ After deployment, the frontend must be configured to communicate with the deploy
 ## GitHub Repository
 
 ```text
-<GITHUB_REPOSITORY_URL>
+https://github.com/abhisriv-466/Inventory-and-Order-Management-System
 ```
 
 ## Docker Hub
@@ -597,7 +592,7 @@ After deployment, the frontend must be configured to communicate with the deploy
 Backend Docker image:
 
 ```text
-<DOCKER_HUB_BACKEND_IMAGE_URL>
+https://hub.docker.com/r/abhisheksriv466/abhibackend
 ```
 
 ## Live Application
@@ -605,36 +600,40 @@ Backend Docker image:
 Frontend:
 
 ```text
-<LIVE_FRONTEND_URL>
+https://inventory-and-order-management-syst-pi.vercel.app
 ```
 
 Backend API:
 
 ```text
-<LIVE_BACKEND_URL>
+https://inventory-backend-5ml9.onrender.com
 ```
 
 API Documentation:
 
 ```text
-<LIVE_BACKEND_URL>/docs
+https://inventory-backend-5ml9.onrender.com/docs
 ```
 
 ---
 
-# Screenshots / Demo
-
-Screenshots demonstrating the application can be added here.
+# Application Demo
 
 Suggested screenshots:
 
-1. Dashboard
-2. Product management
-3. Customer management
-4. Order creation
-5. Order list/details
-6. FastAPI `/docs`
-7. Docker containers running
+![Dashboard](images\dashboard.png)
+
+![Products](images\products-tab.png)
+
+![Customers](images\customers-tab.png)
+
+![Orders](images\orders-tab.png)
+
+![Backend-service-1](images\Backend-1.png)
+
+![Backend-service-2](images\Backend-2.png)
+
+![Backend-service-3](images\Backend-3.png)
 
 ---
 
@@ -642,4 +641,4 @@ Suggested screenshots:
 
 **Abhishek Srivastava**
 
-This project was developed as part of a Software Engineer technical assessment.
+This project was developed as a self project for learning full-stack development, docker containerization and git version control.
