@@ -621,7 +621,7 @@ https://inventory-backend-5ml9.onrender.com/docs
 
 Suggested screenshots:
 
-![](images\dashboard.png)
+![Dashboard](images\dashboard.png)
 
 ![Products](images\products-tab.png)
 
